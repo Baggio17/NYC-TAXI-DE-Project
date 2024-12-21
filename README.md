@@ -34,7 +34,7 @@ ________________________________________
 ________________________________________
 **Architecture and Methodology**
 
-Medallion Architecture
+**Medallion Architecture**
 
 •	Bronze Layer: Ingests raw data directly from APIs, storing it in Parquet format.
 
@@ -48,9 +48,9 @@ Security and Reliability
 
 •	Managed Identities: Implemented to secure resource access and automate authentication processes.
 ________________________________________
-Implementation Details
+**Implementation Details**
 
-1. Dynamic Data Ingestion
+**1. Dynamic Data Ingestion**
    
 •	Objective: Automate the retrieval of NYC Taxi trip data from APIs.
 
@@ -58,7 +58,7 @@ Implementation Details
 
 •	Outcome: Eliminated manual effort and ensured scalability for ingesting large datasets.
 
-2. Raw Data Storage (Bronze Layer)
+**2. Raw Data Storage (Bronze Layer)**
    
 •	Objective: Efficiently store raw data for processing.
 
@@ -66,14 +66,14 @@ Implementation Details
 
 •	Outcome: Enabled organized and efficient storage of high-volume data.
 
-3. Data Transformation (Silver Layer)
+**3. Data Transformation (Silver Layer)**
    
 •	Objective: Standardize and clean data for usability.
 
 •	Approach: Applied PySpark in Databricks to remove null values, enforce schema consistency, and integrate lookup data.
 •	Outcome: Generated clean, structured data ready for aggregation and modeling.
 
-4. Data Modeling and Aggregation (Gold Layer)
+**4. Data Modeling and Aggregation (Gold Layer)**
    
 •	Objective: Prepare data for business insights.
 
@@ -81,15 +81,16 @@ Implementation Details
 
 •	Outcome: Produced analysis-ready data optimized for querying and reporting.
 
-5. Data Delivery for Analytics
+**5. Data Delivery for Analytics**
     
 •	Objective: Enable data visualization and reporting.
 
 •	Approach: Established a direct connection between Azure Data Lake and Power BI. Ensured optimal data access for dashboards and analytics.
 
 •	Outcome: Delivered high-quality data to stakeholders for actionable insights.
+
 ________________________________________
-Key Features and Innovations
+**Key Features and Innovations**
 
 •	Dynamic Pipelines: Automated data ingestion with reusability and scalability.
 
@@ -100,8 +101,9 @@ Key Features and Innovations
 •	Real-World Architecture: Implemented Medallion Architecture to mirror industry standards.
 
 •	Secure and Reliable: Ensured data security through managed identities and redundancy configurations.
+
 ________________________________________
-Business Impact
+**Business Impact**
 •	Efficiency Gains: Automation reduced manual effort, increasing productivity.
 
 •	Scalability: Designed to handle large datasets and growing business needs.
@@ -109,8 +111,10 @@ Business Impact
 •	Improved Decision-Making: Delivered high-quality, analysis-ready data to Power BI, supporting strategic decisions.
 
 •	Industry Relevance: Demonstrated expertise in real-world tools and architectures, adding value to data engineering teams.
+
 ________________________________________
-Lessons Learned
+**Lessons Learned**
+
 •	Developed proficiency in building scalable, production-grade data pipelines.
 
 •	Gained in-depth understanding of Azure’s ecosystem and big data processing.
@@ -119,16 +123,19 @@ Lessons Learned
 
 •	Strengthened knowledge of distributed systems and cloud technologies.
 ________________________________________
-Next Steps
+**Next Steps**
+
 •	Real-Time Processing: Incorporate streaming data pipelines for real-time analytics.
 
 •	Cost Optimization: Analyze and optimize Azure resource usage for cost-effectiveness.
 
 •	Enhanced Analytics: Integrate additional visualization tools like Tableau to broaden reporting capabilities.
+
 ________________________________________
-Repository and Resources
+**Repository and Resources**
 •	NYC Taxi Dataset: NYC Open Data
 •	Project Repository: GitHub Link
 ________________________________________
+
 This project underscores my expertise in designing and implementing scalable, reliable, and impactful data engineering solutions, showcasing my readiness to contribute to enterprise-level data initiatives.
 

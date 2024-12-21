@@ -1,6 +1,7 @@
 # NYC-TAXI-DE-Project
 
 **Executive Summary**
+
 This project is an end-to-end implementation of a modern data engineering pipeline, showcasing advanced skills in data ingestion, transformation, modeling, and delivery. Using the NYC Taxi dataset, it demonstrates the application of industry best practices, scalable architecture, and cutting-edge technologies. The project follows the Medallion Architecture and integrates tools like Azure, Databricks, and Delta Lake to process and deliver high-quality, analysis-ready data. This work is designed to highlight proficiency in building robust, automated data solutions tailored to real-world business scenarios.
 ________________________________________
 **Objectives**
@@ -133,7 +134,9 @@ ________________________________________
 
 ________________________________________
 **Repository and Resources**
+
 •	NYC Taxi Dataset: NYC Open Data
+
 •	Project Repository: GitHub Link
 ________________________________________
 

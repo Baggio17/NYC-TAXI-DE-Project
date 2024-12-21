@@ -138,7 +138,7 @@ ________________________________________
 
 •	NYC Taxi Dataset: [NYC Open Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
-•	Project Repository: [GitHub Link](https://github.com/Baggio17/NYC-TAXI-DE-Project
+•	Project Repository: https://github.com/Baggio17/NYC-TAXI-DE-Project
 ________________________________________
 
 This project underscores my expertise in designing and implementing scalable, reliable, and impactful data engineering solutions, showcasing my readiness to contribute to enterprise-level data initiatives.

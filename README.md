@@ -33,32 +33,40 @@ Tools and Technologies
 •	GitHub: Hosts project documentation, scripts, and datasets for version control.
 ________________________________________
 Architecture and Methodology
+
 Medallion Architecture
+
 •	Bronze Layer: Ingests raw data directly from APIs, storing it in Parquet format.
+
 •	Silver Layer: Cleans and standardizes data to ensure consistency and usability.
+
 •	Gold Layer: Models data for specific business use cases, making it ready for analytics.
+
 Security and Reliability
-•	Data Redundancy: Configured Local (LRS), Zone (ZRS), and Geo (GRS) redundancy for high availability.
+
+•	Data Redundancy: Configured Local (LRS) redundancy for high availability.
+
 •	Managed Identities: Implemented to secure resource access and automate authentication processes.
 ________________________________________
 Implementation Details
+
 1. Dynamic Data Ingestion
 •	Objective: Automate the retrieval of NYC Taxi trip data from APIs.
 •	Approach: Created dynamic pipelines in Azure Data Factory, leveraging parameterized datasets and loops to ingest data for multiple time periods.
 •	Outcome: Eliminated manual effort and ensured scalability for ingesting large datasets.
-2. Raw Data Storage (Bronze Layer)
+3. Raw Data Storage (Bronze Layer)
 •	Objective: Efficiently store raw data for processing.
 •	Approach: Used Azure Data Lake with hierarchical namespaces enabled for structured storage. Data was stored in Parquet format for performance optimization.
 •	Outcome: Enabled organized and efficient storage of high-volume data.
-3. Data Transformation (Silver Layer)
+4. Data Transformation (Silver Layer)
 •	Objective: Standardize and clean data for usability.
 •	Approach: Applied PySpark in Databricks to remove null values, enforce schema consistency, and integrate lookup data.
 •	Outcome: Generated clean, structured data ready for aggregation and modeling.
-4. Data Modeling and Aggregation (Gold Layer)
+5. Data Modeling and Aggregation (Gold Layer)
 •	Objective: Prepare data for business insights.
 •	Approach: Aggregated and modeled data into Delta Lake tables, leveraging features like time travel and ACID compliance.
 •	Outcome: Produced analysis-ready data optimized for querying and reporting.
-5. Data Delivery for Analytics
+6. Data Delivery for Analytics
 •	Objective: Enable data visualization and reporting.
 •	Approach: Established a direct connection between Azure Data Lake and Power BI. Ensured optimal data access for dashboards and analytics.
 •	Outcome: Delivered high-quality data to stakeholders for actionable insights.

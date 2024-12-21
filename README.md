@@ -51,13 +51,77 @@ ________________________________________
 ________________________________________
 **Implementation Details**
 
-**1. Dynamic Data Ingestion**
-   
-•	Objective: Automate the retrieval of NYC Taxi trip data from APIs.
+**1. Dynamic Data Ingestion with Azure Data Factory**
 
-•	Approach: Created dynamic pipelines in Azure Data Factory, leveraging parameterized datasets and loops to ingest data for multiple time periods.
+Azure Data Factory (ADF) was used as the primary orchestration tool for automating the data ingestion process. Each step of the pipeline is explained in detail below:
 
-•	Outcome: Eliminated manual effort and ensured scalability for ingesting large datasets.
+**Step 1: Create a Linked Service**
+
+Purpose: Establish a connection between ADF and the data source (NYC Taxi API) as well as the data storage (Azure Data Lake).
+
+Process:
+
+Navigate to the Azure Data Factory interface and select "Linked Services."
+
+Create a new linked service for the API by providing the API URL and authentication details.
+
+Create another linked service for Azure Data Lake, specifying the storage account and authentication method (e.g., managed identity).
+
+Outcome: Secure and reusable connections to both the data source and storage.
+
+**Step 2: Create Datasets**
+
+Purpose: Define the data structures for both the source (API) and the sink (Azure Data Lake).
+
+Process:
+
+Define a source dataset to represent the API response. Configure the dataset to handle JSON format if the API returns JSON data.
+
+Define a sink dataset for the Bronze layer, pointing to the desired location in Azure Data Lake with a Parquet file format.
+
+Outcome: Data is structured and ready for dynamic parameterization.
+
+**Step 3: Build a Pipeline**
+
+Purpose: Automate the extraction and loading process using a sequence of activities.
+
+Process:
+
+Add an HTTP Activity: Configure an HTTP activity to make GET requests to the NYC Taxi API. Use parameters to dynamically fetch data for each month.
+
+ForEach Activity: Add a ForEach loop to iterate over a list of months. Pass the current iteration value as a parameter to the HTTP activity.
+
+Copy Activity: Link the HTTP activity to a Copy activity that transfers the API response data into the Azure Data Lake.
+
+Error Handling: Add conditional checks and failover logic to manage errors during API calls or data transfer.
+
+Outcome: A fully automated pipeline capable of fetching monthly data dynamically.
+
+**Step 4: Parameterize the Pipeline**
+
+Purpose: Enable the pipeline to handle different configurations without hardcoding values.
+
+Process:
+
+Define parameters for the API URL, month, and target file path.
+
+Pass these parameters dynamically at runtime, ensuring the pipeline remains flexible and reusable.
+
+Outcome: Scalability and adaptability for handling different datasets or time periods.
+
+**Step 5: Test and Debug**
+
+Purpose: Ensure the pipeline works as expected under various scenarios.
+
+Process:
+
+Test the pipeline with a small subset of data.
+
+Validate the output files in the Bronze layer to confirm successful ingestion.
+
+Debug any errors using ADF’s monitoring and logging tools.
+
+Outcome: A robust and error-free data ingestion pipeline.
 
 **2. Raw Data Storage (Bronze Layer)**
    

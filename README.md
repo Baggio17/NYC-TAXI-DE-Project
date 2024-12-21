@@ -1,9 +1,9 @@
 # NYC-TAXI-DE-Project
 
-Executive Summary
+**Executive Summary**
 This project is an end-to-end implementation of a modern data engineering pipeline, showcasing advanced skills in data ingestion, transformation, modeling, and delivery. Using the NYC Taxi dataset, it demonstrates the application of industry best practices, scalable architecture, and cutting-edge technologies. The project follows the Medallion Architecture and integrates tools like Azure, Databricks, and Delta Lake to process and deliver high-quality, analysis-ready data. This work is designed to highlight proficiency in building robust, automated data solutions tailored to real-world business scenarios.
 ________________________________________
-Objectives
+**Objectives**
 
 •	Automate Data Ingestion: Dynamically fetch data from APIs, eliminating manual intervention.
 
@@ -16,7 +16,7 @@ Objectives
 •	Deliver Business Value: Enable seamless data access for analytics and visualization using Power BI.
 
 ________________________________________
-Tools and Technologies
+**Tools and Technologies**
 
 •	Azure Data Factory: Orchestrates data pipelines with parameterization and dynamic configurations.
 
@@ -32,7 +32,7 @@ Tools and Technologies
 
 •	GitHub: Hosts project documentation, scripts, and datasets for version control.
 ________________________________________
-Architecture and Methodology
+**Architecture and Methodology**
 
 Medallion Architecture
 
@@ -51,24 +51,42 @@ ________________________________________
 Implementation Details
 
 1. Dynamic Data Ingestion
+   
 •	Objective: Automate the retrieval of NYC Taxi trip data from APIs.
+
 •	Approach: Created dynamic pipelines in Azure Data Factory, leveraging parameterized datasets and loops to ingest data for multiple time periods.
+
 •	Outcome: Eliminated manual effort and ensured scalability for ingesting large datasets.
+
 3. Raw Data Storage (Bronze Layer)
+   
 •	Objective: Efficiently store raw data for processing.
+
 •	Approach: Used Azure Data Lake with hierarchical namespaces enabled for structured storage. Data was stored in Parquet format for performance optimization.
+
 •	Outcome: Enabled organized and efficient storage of high-volume data.
-4. Data Transformation (Silver Layer)
+
+5. Data Transformation (Silver Layer)
+   
 •	Objective: Standardize and clean data for usability.
+
 •	Approach: Applied PySpark in Databricks to remove null values, enforce schema consistency, and integrate lookup data.
 •	Outcome: Generated clean, structured data ready for aggregation and modeling.
-5. Data Modeling and Aggregation (Gold Layer)
+
+7. Data Modeling and Aggregation (Gold Layer)
+   
 •	Objective: Prepare data for business insights.
+
 •	Approach: Aggregated and modeled data into Delta Lake tables, leveraging features like time travel and ACID compliance.
+
 •	Outcome: Produced analysis-ready data optimized for querying and reporting.
-6. Data Delivery for Analytics
+
+9. Data Delivery for Analytics
+    
 •	Objective: Enable data visualization and reporting.
+
 •	Approach: Established a direct connection between Azure Data Lake and Power BI. Ensured optimal data access for dashboards and analytics.
+
 •	Outcome: Delivered high-quality data to stakeholders for actionable insights.
 ________________________________________
 Key Features and Innovations

@@ -49,7 +49,6 @@ Security and Reliability
 •	Managed Identities: Implemented to secure resource access and automate authentication processes.
 ________________________________________
 Implementation Details
-
 1. Dynamic Data Ingestion
    
 •	Objective: Automate the retrieval of NYC Taxi trip data from APIs.
@@ -57,31 +56,27 @@ Implementation Details
 •	Approach: Created dynamic pipelines in Azure Data Factory, leveraging parameterized datasets and loops to ingest data for multiple time periods.
 
 •	Outcome: Eliminated manual effort and ensured scalability for ingesting large datasets.
-
-3. Raw Data Storage (Bronze Layer)
+2. Raw Data Storage (Bronze Layer)
    
 •	Objective: Efficiently store raw data for processing.
 
 •	Approach: Used Azure Data Lake with hierarchical namespaces enabled for structured storage. Data was stored in Parquet format for performance optimization.
 
 •	Outcome: Enabled organized and efficient storage of high-volume data.
-
-5. Data Transformation (Silver Layer)
+3. Data Transformation (Silver Layer)
    
 •	Objective: Standardize and clean data for usability.
 
 •	Approach: Applied PySpark in Databricks to remove null values, enforce schema consistency, and integrate lookup data.
 •	Outcome: Generated clean, structured data ready for aggregation and modeling.
-
-7. Data Modeling and Aggregation (Gold Layer)
+4. Data Modeling and Aggregation (Gold Layer)
    
 •	Objective: Prepare data for business insights.
 
 •	Approach: Aggregated and modeled data into Delta Lake tables, leveraging features like time travel and ACID compliance.
 
 •	Outcome: Produced analysis-ready data optimized for querying and reporting.
-
-9. Data Delivery for Analytics
+5. Data Delivery for Analytics
     
 •	Objective: Enable data visualization and reporting.
 
@@ -90,6 +85,7 @@ Implementation Details
 •	Outcome: Delivered high-quality data to stakeholders for actionable insights.
 ________________________________________
 Key Features and Innovations
+
 •	Dynamic Pipelines: Automated data ingestion with reusability and scalability.
 •	Advanced Data Management: Leveraged Delta Lake for schema evolution, version control, and transaction logs.
 •	Performance Optimization: Used Parquet format and distributed computing for efficient processing.

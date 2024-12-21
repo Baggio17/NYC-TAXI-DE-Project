@@ -65,7 +65,7 @@ Navigate to the Azure Data Factory interface and select "Linked Services."
 
 Create a new linked service for the API by providing the API URL and authentication details.
 
-Create another linked service for Azure Data Lake, specifying the storage account and authentication method (e.g., managed identity).
+Create another linked service for Azure Data Lake, specifying the storage account and authentication method(managed identity).
 
 Outcome: Secure and reusable connections to both the data source and storage.
 

@@ -4,19 +4,32 @@ Executive Summary
 This project is an end-to-end implementation of a modern data engineering pipeline, showcasing advanced skills in data ingestion, transformation, modeling, and delivery. Using the NYC Taxi dataset, it demonstrates the application of industry best practices, scalable architecture, and cutting-edge technologies. The project follows the Medallion Architecture and integrates tools like Azure, Databricks, and Delta Lake to process and deliver high-quality, analysis-ready data. This work is designed to highlight proficiency in building robust, automated data solutions tailored to real-world business scenarios.
 ________________________________________
 Objectives
+
 •	Automate Data Ingestion: Dynamically fetch data from APIs, eliminating manual intervention.
+
 •	Implement Medallion Architecture: Organize data into Bronze, Silver, and Gold layers for structured processing.
+
 •	Optimize Data Processing: Leverage PySpark and Databricks for efficient large-scale transformations.
+
 •	Ensure Data Quality and Reliability: Utilize Delta Lake features like ACID transactions, data versioning, and time travel.
+
 •	Deliver Business Value: Enable seamless data access for analytics and visualization using Power BI.
+
 ________________________________________
 Tools and Technologies
+
 •	Azure Data Factory: Orchestrates data pipelines with parameterization and dynamic configurations.
+
 •	Azure Data Lake Storage (Gen2): Provides hierarchical storage for big data, optimized for scalability.
+
 •	Databricks: Facilitates distributed data processing using PySpark.
+
 •	Delta Lake: Enhances data management with features like schema enforcement, versioning, and transactional integrity.
+
 •	Parquet File Format: Stores data in a columnar format, improving query performance and storage efficiency.
+
 •	Power BI: Connects to the Gold layer for real-time reporting and analytics.
+
 •	GitHub: Hosts project documentation, scripts, and datasets for version control.
 ________________________________________
 Architecture and Methodology

@@ -43,7 +43,7 @@ ________________________________________
 
 •	Gold Layer: Models data for specific business use cases, making it ready for analytics.
 
-Security and Reliability
+**Security and Reliability**
 
 •	Data Redundancy: Configured Local (LRS) redundancy for high availability.
 
@@ -105,6 +105,7 @@ ________________________________________
 
 ________________________________________
 **Business Impact**
+
 •	Efficiency Gains: Automation reduced manual effort, increasing productivity.
 
 •	Scalability: Designed to handle large datasets and growing business needs.

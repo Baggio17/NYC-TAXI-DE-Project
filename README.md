@@ -41,6 +41,7 @@ This project is an end-to-end implementation of a modern data engineering pipeli
 **Silver Layer:** Cleans and standardizes data to ensure consistency and usability.
 
 **Gold Layer:** Models data for specific business use cases, making it ready for analytics.
+![e2e de project](https://github.com/user-attachments/assets/3ea89fff-97dc-449b-bb4a-52919c67d75e)
 
 ## **Security and Reliability**
 
@@ -63,7 +64,8 @@ Step 3: Build a Pipeline
 Step 4: Parameterize the Pipeline
 
 Step 5: Test and Debug
-
+![ADF Copy 7](https://github.com/user-attachments/assets/a7ebe858-d323-4301-82cb-2b0ec47cbacc)
+![Copy if condition](https://github.com/user-attachments/assets/33eeb640-1f61-4085-a792-5a466e2c74cb)
 
 
 **2. Raw Data Storage (Bronze Layer)**
@@ -81,6 +83,8 @@ Step 5: Test and Debug
 **Approach:** Applied PySpark in Databricks to remove null values, enforce schema consistency, and integrate lookup data.
 
 **Outcome:** Generated clean, structured data ready for aggregation and modeling.
+![Data analysis in ADB](https://github.com/user-attachments/assets/433cc4c0-76c6-401f-a843-50c57f7b352b)
+
 
 **4. Data Modeling and Aggregation (Gold Layer)**
 
@@ -89,6 +93,8 @@ Step 5: Test and Debug
 **Approach:** Aggregated and modeled data into Delta Lake tables, leveraging features like time travel and ACID compliance.
 
 **Outcome:** Produced analysis-ready data optimized for querying and reporting.
+![gold-delta tables](https://github.com/user-attachments/assets/645e1adb-c040-4368-a0a8-f97269f3b136)
+
 
 **5. Data Delivery for Analytics**
 
